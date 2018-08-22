@@ -13,6 +13,7 @@ export default class Modal extends Component {
           <div onClick={this.props.closeModal}>
             x
           </div>
+          <h3>Invest in Loan</h3>
           <ModalItemDetail currItem={this.props.currItem} />
           <ModalForm />
         </div>
