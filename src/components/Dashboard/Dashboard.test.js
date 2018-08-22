@@ -11,6 +11,7 @@ describe('Dashboard', () => {
 
   it('renders main div', () => {
     expect(wrapper.find('div').length).toEqual(1)
+    expect(wrapper.hasClass('dashboard-container')).toEqual(true)
   })
 
   it('renders header', () => {

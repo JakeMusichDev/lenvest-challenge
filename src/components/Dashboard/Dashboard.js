@@ -22,12 +22,12 @@ export default class Dashboard extends Component {
   //     return acc + currValue.available
   //   }, 0);
   // }
-
+  
   render () {
     return (
       <div className='dashboard-container'>
         <h1>Current Loans</h1>
-        <DashboardList loanListData={this.loans} />
+        <DashboardList loanListData={this.loans}  />
       </div>
     )
   }

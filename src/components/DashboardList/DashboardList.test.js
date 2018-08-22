@@ -12,6 +12,4 @@ describe('DashboardList', () => {
     wrapper.setProps({loanListData: [1,2,3] });
     expect(wrapper.children().length).toEqual(3);
   })
-
-
 })

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import DashboardListItem from '../DashboardListItem/DashboardListItem'
+import './DashboardList.css'
 
 export default class DashboardList extends Component {
   render () {

@@ -1,3 +1,15 @@
+
+:root {
+  /* background colors */
+  --list-background-color: #696969;
+
+  /* font */
+  /* --main-font: 'Orbitron', sans-serif; */
+
+  /* calculator dimensions */
+  --list-height: 72%;
+  --list-width: 36%;
+}
 body {
   margin: 0;
   padding: 0;

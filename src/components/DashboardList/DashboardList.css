@@ -1,5 +1,7 @@
 .dashboard-list-container {
   background: lightblue;
   display: flex;
-  flex-flow: row;
+  flex-direction: column;
+  width: 80vw;
+  border: 1px solid red;
 }
