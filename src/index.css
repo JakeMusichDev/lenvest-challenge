@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 :root {
   /* background colors */
   --list-background-color: #696969;
 
   /* font */
-  /* --main-font: 'Orbitron', sans-serif; */
+  --main-font: 'Source Sans Pro', sans-serif;
 
   /* calculator dimensions */
   --list-height: 72%;

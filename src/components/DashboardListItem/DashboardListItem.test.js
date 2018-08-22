@@ -18,4 +18,8 @@ describe('DashboardListItem', () => {
   it('renders status', () => {
     expect(wrapper.find('.list-item-status').length).toEqual(1)
   })
+  it('renders loan item details', () => {
+    wrapper.setProps({loanItem: {entry:'entry'}});
+    expect(wrapper.find('.list-item-entry').length).toEqual(1)
+  })
 })
