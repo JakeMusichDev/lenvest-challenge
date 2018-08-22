@@ -15,4 +15,7 @@ describe('DashboardListItem', () => {
   it('renders button', () => {
     expect(wrapper.find('.list-item-btn-container').length).toEqual(1)
   })
+  it('renders status', () => {
+    expect(wrapper.find('.list-item-status').length).toEqual(1)
+  })
 })

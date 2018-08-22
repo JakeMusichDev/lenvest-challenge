@@ -20,7 +20,10 @@ export default class Dashboard extends Component {
 
   componentWillMount() {
     let currTotal = 0
-    for (const loan of loans) currTotal += parseInt(loan.available.replace(/[^\w]/, ''), 10)
+    for (const loan of loans) {
+      loan['investedStatus'] = false 
+      currTotal += this.cleanParseStr(loan.available)
+    }
     this.setState({currTotal})
   }
 
@@ -35,8 +38,26 @@ export default class Dashboard extends Component {
     this.setState({modalActive:false, currItem: null})
   }
 
-  calcTotalLoans = () => {
-    
+  getFormValue = value => {
+    const {currTotal, currItem } = this.state
+    const cleanNumValue = this.cleanParseStr(value)
+    const nextCurrTotal = currTotal - cleanNumValue
+    this.loans = this.setLoanItemChange(cleanNumValue, currItem.id)
+    this.setState({currTotal:nextCurrTotal}, this.closeModal)
+  }
+
+  setLoanItemChange = (val, itemId) => {
+    return this.loans.map( loan => {
+      if(loan.id === itemId ) {
+        loan['investedStatus'] = true
+        loan['available'] = (this.cleanParseStr(loan.available) - val).toLocaleString('en-UK')
+      }
+      return loan 
+    })
+  }
+
+  cleanParseStr = string => {
+    return parseInt(string.replace(/[^\w]/, ''), 10)
   }
   
   render () {
@@ -52,6 +73,7 @@ export default class Dashboard extends Component {
           isActive={this.state.modalActive} 
           currItem={this.state.currItem} 
           closeModal={this.closeModal}
+          setFormValue={this.getFormValue.bind(this)}
         />
       </div>
     )

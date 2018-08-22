@@ -1,18 +1,35 @@
-.modal-outer-container {
+.modal-container {
   position: absolute;
   top:0;
   left:0;
   height: 100vh;
   width: 100vw;
-  background: rgba(224, 217, 217, 0.5);
-  display: flex;
+  background: rgba(137, 125, 204, 0.719);
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-content: center;
+  border: 1px solid pink;
 }
 
-.modal-inner-container {
+.modal-body {
   height: 50%;
-  width: 50%;
+  width: 45%;
+  margin: 0 auto;
+  display: grid;
+  /* grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%); */
+  border-radius: 5px;
+  background: rgb(129, 193, 194);
   border: 1px solid blue;
+}
+
+.modal-close-btn-container {
+  /* position: relative;
+  top: 0;
+  right: 0; */
+}
+
+
+.modal-close-btn-container:hover {
+  /* transform: scale(1.1); */
 }

@@ -33,4 +33,12 @@ describe('Dashboard', () => {
       />
     )).toEqual(true))
   })
+  // it('opens modal', () => {
+  //     const wrapper = mount(
+  //         <Playground code={code} />
+  //     );
+  //     expect(wrapper.find('.ReactCodeMirror')).toHaveLength(0);
+  //     wrapper.find('button').simulate('click');
+  //     expect(wrapper.find('.ReactCodeMirror')).toHaveLength(1);
+  // });
 })
