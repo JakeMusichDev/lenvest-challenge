@@ -4,6 +4,7 @@ import './Dashboard.css'
 import { loans } from '../../data/current-loans.json'
 import DashboardList from '../DashboardList/DashboardList'
 import Modal from '../Modal/Modal'
+import TotalCounter from '../TotalCounter/TotalCounter'
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -68,7 +69,7 @@ export default class Dashboard extends Component {
           loanListData={this.loans} 
           activateModal={this.activateModal} 
         />
-        {"Current Total Available: " + this.state.currTotal}
+        <TotalCounter total={this.state.currTotal}/>
         <Modal
           isActive={this.state.modalActive} 
           currItem={this.state.currItem} 
