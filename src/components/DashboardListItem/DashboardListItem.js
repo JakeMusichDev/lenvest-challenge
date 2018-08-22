@@ -22,7 +22,7 @@ export default class DashboardListItem extends Component {
         </div>
         <div className='list-item-status'>{investedStatus ? "Invested ✔" : ''}</div>
         <div className="list-item-btn-container">
-          <button className="list-item-btn" onClick={this.setNextModalItem}>Invest</button>
+          <button className="list-item-btn" disabled={investedStatus} onClick={this.setNextModalItem}>{investedStatus ? 'Investment Complete' : 'Invest'}</button>
         </div>
       </div>
     )

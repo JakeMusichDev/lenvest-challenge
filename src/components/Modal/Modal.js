@@ -15,14 +15,12 @@ export default class Modal extends Component {
     const visibilityStyle = {'display': isActive ? 'flex':'none'}
     return (
       <div className="modal-container" style={visibilityStyle}>
-
         <div className="modal-body">
           <div className='modal-header'>Invest in Loan</div>
           <CloseButton close={closeModal} />
           <ModalItemDetail currItem={currItem} />
           <ModalForm setFormValue={setFormValue} threshold={currItem ? currItem.available : null}/>
         </div>
-
       </div>
     )
   }
