@@ -3,7 +3,7 @@ import React from 'react'
 const ModalItemDetail = props => {
   return (
     <div>
-      detail
+      {props.currItem ? props.currItem.id : null }
     </div>
   )
 }

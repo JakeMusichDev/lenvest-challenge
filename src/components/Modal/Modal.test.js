@@ -8,14 +8,10 @@ describe('Modal', () => {
   beforeEach(() => {
     wrapper = shallow(<Modal />);
   });
-
   it('renders main div', () => {
-    expect(wrapper.find('div').length).toEqual(1)
-    expect(wrapper.hasClass('modal-container')).toEqual(true)
+    expect(wrapper.find('div').length).toEqual(3)
+    expect(wrapper.hasClass('modal-outer-container')).toEqual(true)
   })
-  // it('renders header', () => {
-  //   expect(wrapper.find('h1').length).toEqual(1)
-  // })
   it('renders DashboardList component', () => {
     (expect(wrapper.containsMatchingElement(<ModalItemDetail />)).toEqual(true))
   })
