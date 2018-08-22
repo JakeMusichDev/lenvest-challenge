@@ -1,11 +1,25 @@
-.dashboard-list-container {
-  grid-row: 1/6;
-  grid-column: 1/6;
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
-  width: 75vw;
-  padding: 2%;
-  margin-left: calc((100vw - 75vw) / 1.5);
-  /* border: 1px solid red; */
+@media only screen and (max-width: 992px) {   
+  .dashboard-list-container {
+    grid-row: 1/6;
+    grid-column: 1/6;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    padding: 2%;
+    margin-left: calc((100vw - 75vw) / 2);
+  }
+}
+
+@media only screen and (min-width: 992px) { 
+  .dashboard-list-container {
+    grid-row: 1/6;
+    grid-column: 1/6;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    padding: 2%;
+    margin-left: calc((100vw - 75vw) / 1.5);
+  }
 }

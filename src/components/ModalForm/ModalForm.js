@@ -13,7 +13,11 @@ export default class ModalForm extends Component {
   }
 
   handleSubmit = e => {
+    if(this.state.inputValue < this.props.threshold) {
+      return 
+    }
     this.props.setFormValue(this.state.inputValue)
+    this.input.value = ''
     e.preventDefault()
   }
 
@@ -21,8 +25,8 @@ export default class ModalForm extends Component {
     return (
       <form className="modal-form-container" onSubmit={this.handleSubmit}>
         <label>Investment Amount $</label>
-        <input className='form-text-input' type="text" onChange={this.handleChange}/>
-        <input className='form-text-input' type="submit" value="Invest now" />
+        <input ref={thisDiv => this.input = thisDiv} className='form-text-input' type="text" onChange={this.handleChange}/>
+        <input className='form-text-submit' type="submit" value="Invest now" />
       </form>
     )
   }

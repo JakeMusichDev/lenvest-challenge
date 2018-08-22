@@ -5,6 +5,10 @@ import ModalForm from '../ModalForm/ModalForm'
 import ModalItemDetail from '../ModalItemDetail/ModalItemDetail'
 
 export default class Modal extends Component {
+  componentDidMount() {
+    // this.timeLeft = this.props.currItem.term_remaining
+
+  }
 
   render () {
     const {currItem, setFormValue, closeModal, isActive} = this.props
@@ -13,10 +17,10 @@ export default class Modal extends Component {
       <div className="modal-container" style={visibilityStyle}>
 
         <div className="modal-body">
-          <h3>Invest in Loan</h3>
+          <div className='modal-header'>Invest in Loan</div>
           <CloseButton close={closeModal} />
           <ModalItemDetail currItem={currItem} />
-          <ModalForm setFormValue={setFormValue} />
+          <ModalForm setFormValue={setFormValue} threshold={currItem ? currItem.available : null}/>
         </div>
 
       </div>

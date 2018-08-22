@@ -7,21 +7,18 @@ export default class DashboardListItem extends Component {
     activateModal(loanItem)
   }
 
-  buildItemDetailSection = () => {
-    return Object.entries(this.props.loanItem)
-      .filter(entry => entry[0] !== 'id' && entry[0] !== 'investedStatus' && entry[0] !== 'title')
-      .map( (entry) => {
-        return <div className="list-item-entry">{entry[0] + ': '+ entry[1]}</div>
-      })
-  }
-
   render () {
-    const { id, title, investedStatus } = this.props.loanItem
+    const { id, title, tranche, available, annualised_return, ltv, amount, term_remaining, investedStatus } = this.props.loanItem
     return (
       <div className='list-item-container' key={id} style={{'backgroundColor': investedStatus ? "rgba(155, 228, 165, 0.63)" : 'rgba(227, 250, 255, 0.705)'}}>
+        <div className="list-item-title">{title}</div>
         <div className="list-item-detail-container">
-          <div className="list-item-title">{title}</div>
-          {this.buildItemDetailSection()}
+          <div className="list-item-entry"> Tranche <div className="list-item-entry-detail"> {tranche} </div></div>
+          <div className="list-item-entry"> Available <div className="list-item-entry-detail"> £{available.toLocaleString('en-US')}</div></div>
+          <div className="list-item-entry"> Annualised Return <div className="list-item-entry-detail"> {(annualised_return).toLocaleString()} </div></div>
+          <div className="list-item-entry"> LTV <div className="list-item-entry-detail"> {ltv} </div></div>
+          <div className="list-item-entry"> Amount Remaining <div className="list-item-entry-detail"> £{(amount).toLocaleString()} </div></div>
+          <div className="list-item-entry"> Term Remaining <div className="list-item-entry-detail"> {term_remaining} </div></div>
         </div>
         <div className='list-item-status'>{investedStatus ? "Invested ✔" : ''}</div>
         <div className="list-item-btn-container">

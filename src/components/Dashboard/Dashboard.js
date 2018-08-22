@@ -43,11 +43,12 @@ export default class Dashboard extends Component {
     const {currTotal, currItem } = this.state
     const cleanNumValue = this.cleanParseStr(value)
     const nextCurrTotal = currTotal - cleanNumValue
-    this.loans = this.setLoanItemChange(cleanNumValue, currItem.id)
-    this.setState({currTotal:nextCurrTotal}, this.closeModal)
+  
+    this.loans = this.setItemChange(cleanNumValue, currItem.id)
+    this.setState({currTotal:nextCurrTotal}, this.closeModal)  
   }
 
-  setLoanItemChange = (val, itemId) => {
+  setItemChange = (val, itemId) => {
     return this.loans.map( loan => {
       if(loan.id === itemId ) {
         loan['investedStatus'] = true

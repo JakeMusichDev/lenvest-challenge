@@ -1,13 +1,49 @@
 .modal-form-container {
   grid-row: 4/5;
   grid-column: 1/5;
-  /* width: 80%; */
   padding: 2%;
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-text-input {
-  width: 20%;
-  margin: 0 auto;
+@media only screen and (max-width: 992px) {
+  .form-text-input {
+    width: 40%;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .form-text-submit {
+    width: 40%;
+    border-radius: 25px;
+    border: 1px solid rgba(42, 21, 233, 0.6);
+    color: rgba(42, 21, 233, 0.8);
+    cursor: pointer;
+    transition: 0.3s all;
+  }
 }
+
+@media only screen and (min-width: 992px) {
+  .form-text-input {
+    width: 20%;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .form-text-submit {
+    width: 20%;
+    border-radius: 25px;
+    border: 1px solid rgba(42, 21, 233, 0.6);
+    color: rgba(42, 21, 233, 0.8);
+    cursor: pointer;
+    transition: 0.3s all;
+  }
+}
+
+.list-item-btn:hover {
+  border: 1px solid rgba(42, 21, 233, 1);
+  color: rgba(42, 21, 233, 1);
+}
+
