@@ -15,19 +15,19 @@ export default class Dashboard extends Component {
       currTotal: 0
     }
 
-    this.loans = loans;
+    this.loans = loans
   }
 
-  // componentDidMount() {
-  //   const totalAvailable = loans.reduce((acc, currValue) => {
-  //     return acc + currValue.available
-  //   }, 0);
-  // }
+  componentWillMount() {
+    let currTotal = 0
+    for (const loan of loans) currTotal += parseInt(loan.available.replace(/[^\w]/, ''), 10)
+    this.setState({currTotal})
+  }
 
   activateModal = nextItem => {
     this.setState({
       modalActive: true,
-      currItem:nextItem 
+      currItem:nextItem
     })
   }
 
@@ -47,6 +47,7 @@ export default class Dashboard extends Component {
           loanListData={this.loans} 
           activateModal={this.activateModal} 
         />
+        {"Current Total Available: " + this.state.currTotal}
         <Modal
           isActive={this.state.modalActive} 
           currItem={this.state.currItem} 

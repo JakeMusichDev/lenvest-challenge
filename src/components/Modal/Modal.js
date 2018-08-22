@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import ModalItemDetail from '../ModalItemDetail/ModalItemDetail'
 import './Modal.css'
+
+import ModalForm from '../ModalForm/ModalForm'
+import ModalItemDetail from '../ModalItemDetail/ModalItemDetail'
 
 export default class Modal extends Component {
   render () {
@@ -12,6 +14,7 @@ export default class Modal extends Component {
             x
           </div>
           <ModalItemDetail currItem={this.props.currItem} />
+          <ModalForm />
         </div>
       </div>
     )
