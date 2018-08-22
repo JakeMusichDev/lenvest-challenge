@@ -3,10 +3,8 @@ import DashboardListItem from '../DashboardListItem/DashboardListItem'
 
 export default class DashboardList extends Component {
   render () {
-    console.log(this.props.loanListData);
-    
     return (
-      <div>
+      <div className="dashboard-list-container" >
         {this.props.loanListData.map( loanItem => <DashboardListItem loanItem={loanItem} /> )}
       </div>
     )

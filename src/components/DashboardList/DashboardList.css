@@ -1,0 +1,5 @@
+.dashboard-list-container {
+  background: lightblue;
+  display: flex;
+  flex-flow: row;
+}

@@ -5,11 +5,12 @@ import DashboardList from './DashboardList'
 describe('DashboardList', () => {
   let wrapper;
   beforeEach( () => {
-    wrapper = shallow(<DashboardList />);
+    wrapper = shallow(<DashboardList loanListData={[]} />);
   });
 
-  it('renders single div', () => {
-    expect(wrapper.find('div').length).toEqual(1)
+  it('renders array of loanItems from props', () => {
+    wrapper.setProps({loanListData: [1,2,3] });
+    expect(wrapper.children().length).toEqual(3);
   })
 
 
