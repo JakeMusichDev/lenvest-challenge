@@ -8,8 +8,12 @@ describe('Loan Container', () => {
     wrapper = shallow(<Dashboard />);
   });
 
-  it('renders div', () => {
+  it('renders main div', () => {
     expect(wrapper.find('div').length).toEqual(1)
+  })
+
+  it('renders header', () => {
+    expect(wrapper.find('h1').length).toEqual(1)
   })
 
 })
