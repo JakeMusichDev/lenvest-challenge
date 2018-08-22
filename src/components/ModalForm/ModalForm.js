@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './ModalForm.css'
 
 export default class ModalForm extends Component {
   constructor(props) {
@@ -18,10 +19,10 @@ export default class ModalForm extends Component {
 
   render () {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="modal-form-container" onSubmit={this.handleSubmit}>
         <label>Investment Amount $</label>
-        <input type="text" onChange={this.handleChange}/>
-        <input type="submit" value="Submit" />
+        <input className='form-text-input' type="text" onChange={this.handleChange}/>
+        <input className='form-text-input' type="submit" value="Invest now" />
       </form>
     )
   }

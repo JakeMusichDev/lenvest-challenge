@@ -64,7 +64,7 @@ export default class Dashboard extends Component {
   render () {
     return (
       <div className='dashboard-container'>
-        <h1>Current Loans</h1>
+        <div className='dashboard-header'>Current Loans</div>
         <DashboardList 
           loanListData={this.loans} 
           activateModal={this.activateModal} 

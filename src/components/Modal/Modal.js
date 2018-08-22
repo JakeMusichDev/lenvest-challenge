@@ -26,9 +26,9 @@ export default class Modal extends Component {
 
 const CloseButton = props => {
   return (
-    <div className="modal-close-btn-container">
-      <div onClick={props.close}> 
-        X
+    <div onClick={props.close} className="modal-close-btn-container">
+      <div> 
+        ✕ 
       </div>
     </div>
   )

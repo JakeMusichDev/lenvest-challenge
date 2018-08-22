@@ -1,0 +1,13 @@
+.modal-form-container {
+  grid-row: 4/5;
+  grid-column: 1/5;
+  /* width: 80%; */
+  padding: 2%;
+  display: flex;
+  flex-flow: column;
+}
+
+.form-text-input {
+  width: 20%;
+  margin: 0 auto;
+}

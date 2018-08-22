@@ -1,7 +1,11 @@
 .dashboard-list-container {
+  grid-row: 1/6;
+  grid-column: 1/6;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
-  width: 80vw;
-  margin-left: calc((100vw - 80vw)/2);
-  border: 1px solid red;
+  width: 75vw;
+  padding: 2%;
+  margin-left: calc((100vw - 75vw) / 1.5);
+  /* border: 1px solid red; */
 }

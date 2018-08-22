@@ -20,7 +20,7 @@
 }
 
 .list-item-title {
-  border: 1px solid pink;
+  margin-bottom: 1%;
   width: 80%;
   grid-row: 1;
   grid-column: 1/4;
@@ -37,7 +37,6 @@
   text-align: right;
   color: green;
   font-size: 1.1em;
-  /* border: 1px solid green; */
   grid-row: 1;
   grid-column: 4;
 }
@@ -53,7 +52,12 @@
 
 .list-item-btn {
   border-radius: 25px;
-  border: 1px solid rgb(112, 214, 214);
-  background: paleturquoise;
-  color: black;
+  border: 1px solid rgba(42, 21, 233, 0.6);
+  color: rgba(42, 21, 233, 0.8);
+  transition: 0.3s all;
+}
+
+.list-item-btn:hover {
+  border: 1px solid rgba(42, 21, 233, 1);
+  color: rgba(42, 21, 233, 1);
 }
