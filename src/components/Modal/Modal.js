@@ -5,7 +5,10 @@ import './Modal.css'
 export default class Modal extends Component {
   render () {
     return (
-      <div className="modal-container" style={{'display': this.props.active ? 'block' : 'none'}}>
+      <div className="modal-container" style={{'display': this.props.isActive ? 'block' : 'none'}}>
+        <div onClick={this.props.closeModal}>
+          x
+        </div>
         <ModalItemDetail />
       </div>
     )

@@ -30,6 +30,14 @@ export default class Dashboard extends Component {
       currItem:nextItem 
     })
   }
+
+  closeModal = () => {
+    this.setState({modalActive:false, currItem: null})
+  }
+
+  calcTotalLoans = () => {
+    
+  }
   
   render () {
     return (
@@ -42,6 +50,7 @@ export default class Dashboard extends Component {
         <Modal
           isActive={this.state.modalActive} 
           currItem={this.state.currItem} 
+          closeModal={this.closeModal}
         />
       </div>
     )

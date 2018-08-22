@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import './DashboardListItem.css'
 
 export default class DashboardListItem extends Component {
+  setNextModalItem = () => {
+    const {activateModal, loanItem} = this.props
+    activateModal(loanItem)
+  }
+
   render () {
     const { id, title, tranche, available, annualised_return, term_remaining, ltv, amount } = this.props.loanItem
     return (
@@ -13,7 +18,7 @@ export default class DashboardListItem extends Component {
           Status
         </div>
         <div className="list-item-btn-container">
-          <button>Invest</button>
+          <button onClick={this.setNextModalItem}>Invest</button>
         </div>
       </div>
     )
