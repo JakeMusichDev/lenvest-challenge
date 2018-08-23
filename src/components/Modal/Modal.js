@@ -5,11 +5,6 @@ import ModalForm from '../ModalForm/ModalForm'
 import ModalItemDetail from '../ModalItemDetail/ModalItemDetail'
 
 export default class Modal extends Component {
-  componentDidMount() {
-    // this.timeLeft = this.props.currItem.term_remaining
-
-  }
-
   render () {
     const {currItem, setFormValue, closeModal, isActive} = this.props
     const visibilityStyle = {'display': isActive ? 'flex':'none'}

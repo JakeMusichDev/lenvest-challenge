@@ -12,7 +12,6 @@ describe('App', () => {
 
   it('renders without crashing', () => {
     expect(wrapper).toMatchSnapshot()
-    // (expect(wrapper.find('div').length).toEqual(1))
   });
 
   it('renders Dashboard component', () => {

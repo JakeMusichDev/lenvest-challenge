@@ -13,6 +13,7 @@ describe('Dashboard', () => {
   it('renders main div', () => {
     expect(wrapper.hasClass('dashboard-container')).toEqual(true)
   })
+  
   it('renders header', () => {
     expect(wrapper.find('.dashboard-header').length).toEqual(1)
   })
@@ -25,6 +26,7 @@ describe('Dashboard', () => {
       />
     )).toEqual(true))
   })
+
   it('renders Modal component', () => {
     (expect(wrapper.containsMatchingElement(
       <Modal
@@ -33,12 +35,4 @@ describe('Dashboard', () => {
       />
     )).toEqual(true))
   })
-  // it('opens modal', () => {
-  //     const wrapper = mount(
-  //         <Playground code={code} />
-  //     );
-  //     expect(wrapper.find('.ReactCodeMirror')).toHaveLength(0);
-  //     wrapper.find('button').simulate('click');
-  //     expect(wrapper.find('.ReactCodeMirror')).toHaveLength(1);
-  // });
 })

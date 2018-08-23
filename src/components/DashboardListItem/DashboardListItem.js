@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import './DashboardListItem.css'
-
 import {getTimeRemaining} from '../../utils/getTimeRemaining'
+import './DashboardListItem.css'
 
 export default class DashboardListItem extends Component {
   setNextModalItem = () => {
