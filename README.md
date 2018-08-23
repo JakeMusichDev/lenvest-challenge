@@ -3,7 +3,7 @@
 
   I had a great time building this UI, I'm looking forward to discussing it with you!
   
-## Setup
+## Setup :
   ```
   git clone git@github.com:JakeMusichDev/lenvest-challenge.git
   yarn install 
@@ -20,5 +20,5 @@
   Scaffolded with Create-React-App generator
   Testing handled with Jest and Enzyme <http://airbnb.io/enzyme/>
 
-## Contact ::boom::
+## Contact :boom:
   You can reach me at makejusich@gmail.com 
