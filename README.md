@@ -3,14 +3,13 @@
 
   I had a great time building this UI, I'm looking forward to discussing it with you!
   
-## Setup :
+## Setup :tada:
   ```
   git clone git@github.com:JakeMusichDev/lenvest-challenge.git
   yarn install 
   yarn start 
   ```
-## Testing 
-
+## Testing :crystal_ball:
   ```
   yarn test
   ```
