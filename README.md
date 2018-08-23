@@ -16,8 +16,7 @@
 
 ## Technology 
 
-  Scaffolded with Create-React-App generator
-  Testing handled with Jest and Enzyme <http://airbnb.io/enzyme/>
+  Scaffolded with Create-React-App generator & Testing handled with Jest and Enzyme <http://airbnb.io/enzyme/>
 
 ## Contact :boom:
   You can reach me at makejusich@gmail.com 
