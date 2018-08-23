@@ -1,6 +1,7 @@
 .modal-item-detail-container {
   grid-row: 2/4;
   grid-column: 1/5;
+  text-align: center;
 }
 
 @media only screen and (max-width: 992px) {   
