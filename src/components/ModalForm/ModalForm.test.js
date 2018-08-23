@@ -30,5 +30,5 @@ describe('ModalForm', () => {
     // });
 
     // expect(onChange).toBeCalledWith(value);
-});
+  });
 })

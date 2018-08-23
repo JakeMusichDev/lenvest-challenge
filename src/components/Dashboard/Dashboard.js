@@ -43,7 +43,6 @@ export default class Dashboard extends Component {
     const {currTotal, currItem } = this.state
     const cleanNumValue = this.cleanParseStr(value)
     const nextCurrTotal = currTotal - cleanNumValue
-    
     this.loans = this.setItemChange(cleanNumValue, currItem.id)
     this.setState({currTotal:nextCurrTotal}, this.closeModal)  
   }
@@ -70,7 +69,9 @@ export default class Dashboard extends Component {
           loanListData={this.loans} 
           activateModal={this.activateModal} 
         />
-        <TotalCounter total={this.state.currTotal}/>
+        <TotalCounter 
+          total={this.state.currTotal}
+        />
         <Modal
           isActive={this.state.modalActive}
           currItem={this.state.currItem} 

@@ -1,15 +1,7 @@
 import React from 'react'
 import './ModalItemDetail.css'
-import moment from 'moment'
 
-const getTimeRemaining = (term_remaining) => {
-
-  
-  // let futureTime = currentTime + term_remaining
-  // let diffTime = futureTime - currentTime;
-  // let duration = moment.duration( diffTime * 1000, 'milliseconds');
-  // return duration.hours() + " hours : " + duration.minutes() +  "minutes : " + duration.seconds() + ' seconds'
-}
+import {getTimeRemaining} from '../../utils/getTimeRemaining'
 
 const ModalItemDetail = props => {
   return (

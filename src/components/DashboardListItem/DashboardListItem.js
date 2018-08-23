@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './DashboardListItem.css'
 
+import {getTimeRemaining} from '../../utils/getTimeRemaining'
+
 export default class DashboardListItem extends Component {
   setNextModalItem = () => {
     const {activateModal, loanItem} = this.props
@@ -18,7 +20,7 @@ export default class DashboardListItem extends Component {
           <div className="list-item-entry"> Annualised Return <div className="list-item-entry-detail"> {(annualised_return).toLocaleString()} </div></div>
           <div className="list-item-entry"> LTV <div className="list-item-entry-detail"> {ltv} </div></div>
           <div className="list-item-entry"> Amount Remaining <div className="list-item-entry-detail"> £{(amount).toLocaleString()} </div></div>
-          <div className="list-item-entry"> Term Remaining <div className="list-item-entry-detail"> {term_remaining} </div></div>
+          <div className="list-item-entry"> Term Remaining <div className="list-item-entry-detail"> {getTimeRemaining(term_remaining)} </div></div>
         </div>
         <div className='list-item-status'>{investedStatus ? "Invested ✔" : ''}</div>
         <div className="list-item-btn-container">

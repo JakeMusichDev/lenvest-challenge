@@ -20,10 +20,15 @@ export default class ModalForm extends Component {
     e.preventDefault()
   }
 
+  //--------------------------------------------------------
+  // checkInputValidity - checks form input for valid value 
+  // returns boolean representing if value is valid, and submission should continue 
+  //--------------------------------------------------------
   checkInputValidity = () => {
     const {inputValue} = this.state; 
     const threshold = this.props.threshold.replace(/[^\w]/g, '')
     if(!inputValue || parseInt(inputValue,10) > parseInt(threshold,10) || !(/^[0-9]*$/.test(inputValue))) {
+      alert('Invalid input, please try a numerical value.')
       this.setState({inputValue: ''})
       this.input.value = ''
       return false
