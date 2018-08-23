@@ -16,10 +16,10 @@ export default class DashboardListItem extends Component {
         <div className="list-item-title">{title}</div>
         <div className="list-item-detail-container">
           <div className="list-item-entry"> Tranche <div className="list-item-entry-detail"> {tranche} </div></div>
-          <div className="list-item-entry"> Available <div className="list-item-entry-detail"> £{available.toLocaleString('en-US')}</div></div>
-          <div className="list-item-entry"> Annualised Return <div className="list-item-entry-detail"> {(annualised_return).toLocaleString()} </div></div>
+          <div className="list-item-entry"> Available <div className="list-item-entry-detail"> £{available}</div></div>
+          <div className="list-item-entry"> Annualised Return <div className="list-item-entry-detail"> {annualised_return} </div></div>
           <div className="list-item-entry"> LTV <div className="list-item-entry-detail"> {ltv} </div></div>
-          <div className="list-item-entry"> Amount Remaining <div className="list-item-entry-detail"> £{(amount).toLocaleString()} </div></div>
+          <div className="list-item-entry"> Amount Remaining <div className="list-item-entry-detail"> £{amount} </div></div>
           <div className="list-item-entry"> Term Remaining <div className="list-item-entry-detail"> {getTimeRemaining(term_remaining)} </div></div>
         </div>
         <div className='list-item-status'>{investedStatus ? "Invested ✔" : ''}</div>

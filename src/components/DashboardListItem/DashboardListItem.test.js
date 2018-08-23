@@ -10,7 +10,7 @@ describe('DashboardListItem', () => {
 
   it('renders title', () => {
     wrapper.setProps({loanItem: {title:'title'}});
-    expect(wrapper.find('.list-item-title').text()).toEqual('title');
+    expect(wrapper.find('.list-item-title').length).toEqual(1);
   })
   it('renders button', () => {
     expect(wrapper.find('.list-item-btn-container').length).toEqual(1)
@@ -20,6 +20,6 @@ describe('DashboardListItem', () => {
   })
   it('renders loan item details', () => {
     wrapper.setProps({loanItem: {entry:'entry'}});
-    expect(wrapper.find('.list-item-entry').length).toEqual(1)
+    expect(wrapper.find('.list-item-entry').length).toEqual(6)
   })
 })
